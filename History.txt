@@ -1,0 +1,43 @@
+ 02/12/13 YuriR   SCR-115753 - Calculate Min values of To Be Recognized cost according to the order of transactions (for each cost type) and store them in patch fields ProjectJobCost.LbrMin, BurMin,...
+                                process MFG-VAR, MFG-CUS transactions, minor: moved common code in accumActCost, setProjProcessed procedures.
+ 02/18/13 YuriR   SCR-104768 - Fixed calculations of Estimated, CTC costs, their totals, simplify code and removed redundant fragments;  
+ 02/19/13 YuriR   SCR-104808 - Added checking if JobCompletionDate is not greater than AsOfDate, fixed calculation of CTC COS.
+ 02/27/13 JesusC  SCR-103290 - Cleaned some comments and minor change. 
+ 03/14/13 YuriR   SCR-114268 - Modified accumActCost: moved Split Mtl costs there and added conditions so after Manual Recognition MinCost cannot be negative.
+ 04/17/13 YuriR   SCR-105833 - XAP130_PTJ.cs - Accumulate Actual costs of Assembly Details; honor flag JobHead.SplitMfgCostElements for Assembly Details; 
+ 08/26/13 JeanetteP SCR 127004 - Fixed how Subcontract Cost is accumulated in the ProjectAnalysis table for LineCode = "SubcDetail".
+ 05/23/14 YeseniaA  SCR 141701 - Uplift of SCR 139613 - Modified accumActCost: Process transactions of Job Adjustment with zero Qty.  
+ 02/11/15 ArMoreno  SCR-156869 - Cost To Complete will be zero when the related operation is completed
+ 04/13/15 JeanetteP SCR 160669 - XAP130_PTJ.cs and XAP130_PTJ_Queries.cs to link PORel to buy direct material based on OrderDate and not Due Date.
+ 07/16/15 ArMoreno SCR 158280 - The fix for SCR 158500 was include under this solution. The signature was modified in order to recieve the List type. Reset actual cost from lineCode line
+ 09/10/15 ArMoreno SCR 169118 - The 'lineAnalysis' fields are set according with the information on the job elements.
+ 11/26/15 ArMoreno SCR 176318 - The stringComparer was added as paramater in functions like Contains, Union and Distinct in order allow case insensitive
+ 02/12/15 ArMoreno SCR 177907 - Several Validates, Releases and right lockHints were added in order to avoid timeouts and deadlocks
+ 02/12/15 ArMoreno  SCR 177907 - IndexList implemented in order to improve performance
+ 05/05/15 ArMoreno- SCR 182421 - Several locking issues were fixed when running BPA for big projects at the same time
+ 05/05/15 ArMoreno- SCR 182421 - Second checkin for cleanup code
+ 05/19/15 ArMoreno  SCR 184453 - Material cost details are now consider when a job adjustment is made.
+ 07/12/15 ArMoreno  SCR 177909  - Enum Types were added in order to avoid type errors
+ 08/25/16 dparillo  SCR 186829 - added code to take into account PO qty per factor
+ 08/29/16 dparillo  SCR 186829 - rework of previous change to utilize similar logic from SCR 175331 for cost per factor
+ 10/10/16 agonzalez SCR 189855 - Added condition to avoid duplicate cost when the row is marked to be skipped.
+ 12/13/16 YuriR     SCR 189834 - Rolled backed changes for 189855;
+ 01/09/17 YuriR     SCR 196346 - Handle null values of JobMtl, JobOper;
+ 01/17/17 YuriR     SCR 189834 - Avoid duplicated costs when Enable mfg cost elements = false and both UnitCosts and Mtl-costs > 0; 
+ 01/25/17 YuriR     SCR 189834 - Create PA lines with linecode = [MoveCosts] and negative Act.costs of child job; Removed redundant code of processing WIP-MFG transactions;
+ 03/23/17 YuriR     SCR 198202 - Accumulate issued qty to generate then new lineCode [PODtlReverse] to override PO costs by material issues;
+ 03/29/17 YuriR     SCR 198202 - Added condition if TranDate is not later than ReceiptDate to apply qty of issued material to PO received; 
+ 03/31/17 YuriR     SCR 198202 - Process negative Issued Qty, which can be applied either to Reversed or Over Issued qty;
+ 04/02/17 YuriR     SCR 198202 - Simplified calculation of reversed qty, fixed BPA when regen is set off;
+ 05/05/17 YuriR     SCR 198202 - Rolled back changes so it will be fixed under new enphancement;
+ 05/19/17 YuriR     SCR 201887 - Replaced all values of PA fields of LineCode, LineSource used in the queries with properties of the static class (instead of the resource or hardcoded strings);
+ 10/02/17 YuriR     SCR 208011 - Process all PORel when flag Regen is set on;
+ 03/27/18 JeanetteP ERPS-76896 - XAP130_PTJ.cs: Modified how ODC is being tracked. If Job Miscelleneous Charge is linked to a Manufacture Job then it is not considered as ODC but as Material Cost.
+ 04/09/18 JeanetteP ERPS-76896 - XAP130-PTJ.cs: Additional changes for tracking estimate costs related to miscellaneous charge.
+ 06/05/18 YuriR     ERPS-90790 - Performance, Find ProjectAnalysis records using cach collection; 
+ 08/30/18 JeanetteP ERPS-95823 - XAP130_PTJ.cs, XAP130_PTJ.Queries.cs: Rollback of changes added for ERPS-76896. The original issue reported in ERPS-76896 will be fixed as enhancement in future release to track ODC as a separate costing bucket.
+ 10/24/18 JeanetteP ERPS-75703 - XAP130_PTJ.cs: Added logic to capture ADJ-MTL transaction as ODCDetail if the linked JobMtl is a Miscellaneous Charge. This transaction was ignored before this fix but will now be created as ODCDetail ProjectAnalysis and will be processed in XAP130_ODC.
+ 03/28/19 JeanetteP ERPS-105144 - XAP130_PTJ.cs: Modified the accumActCost to calculate the true value for MinCosts. 
+ 04/12/19 JeanetteP ERPS-105144 - XAP130_PTJ.cs: Modified Run_XAP130_PTJ() to default MinCosts from ProjectJobCost only if not in Regen mode.
+ 06/18/19 YuriR     ERPS-116351 - XAP130_PTJ.cs: Modified accumActCost() - avoid join all costs in material against WIP-MFG (although its PA LineCode is MaterialDetails).
+ 08/21/19 JeanetteP ERPS-120218 - XAP130_PTJ.cs; XAP130_PTJ.Queries.cs: Modified Run_XAP130_PTJ() to determine if the latest manual revenue recognition reversals should be included in this BPA run.

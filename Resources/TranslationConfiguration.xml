@@ -1,0 +1,41 @@
+<Translation>
+  <Ignored>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">PUR-MTL</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">PUR-SUB</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">DMR-MTL</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">DMR-SUB</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">DMR-ASM</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">MTL-INS</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">INS-DMR</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">INS-MTL</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">INS-SUB</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">PLT-ASM</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">PLT-MTL</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">STK-MTL</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">STK-ASM</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">SUB-DMR</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">ADJ-PUR</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">ADJ-MTL</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">ADJ-SUB</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">SVG-STK</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">WIP-MFG</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">ADJ-MTL,PUR-MTL,DMR-MTL,INS-MTL,STK-MTL,PLT-MTL,MTL-INS,MTL-DMR,SVG-STK</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">MaterialDetail</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">DMR-ASM,PLT-ASM,STK-ASM</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">AssemblyDetail</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">PUR-SUB,DMR-SUB,INS-SUB,ADJ-SUB,SVG-STK</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">SubcDetail</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">MTL-DMR</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">M,S</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">PRJ</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">Project Job</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">MFG</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">Production Job</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">Service Job</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">Material</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">POHeader</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">tcmaterialcos</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">Assembly</Ignore>
+    <Ignore file="CAP130-PTJ.cs" class="CAP130_PTJ" method="_CAP130_PTJ">SubContract</Ignore>
+  </Ignored>
+</Translation>
